@@ -1,0 +1,32 @@
+.verticalSwiper {
+    width: 100vw;
+    height: 100vh; 
+    overflow: hidden;
+}
+.video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+.like{
+    position: absolute;
+    top: 70%;
+    font-size: 3rem;
+    right: 1rem;
+    color: white;
+}
+.comment{
+    position: absolute;
+    top: 80%;
+    font-size: 2.5rem;
+    right: 1rem;
+    color: white;
+}
+.share{
+    position: absolute;
+    top: 90%;
+    font-size: 2.2rem;
+    right: 1.3rem;
+    color: white;
+}

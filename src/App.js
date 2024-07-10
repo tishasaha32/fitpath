@@ -1,9 +1,10 @@
 import "./App.css";
+import Reels from "./pages/Reels";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">app</header>
+      <Reels />
     </div>
   );
 }
