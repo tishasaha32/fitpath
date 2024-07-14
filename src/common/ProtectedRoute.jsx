@@ -1,16 +1,12 @@
-// ProtectedRoute.jsx
 import React from "react";
 import { Navigate } from "react-router-dom";
-import { useGetUserData } from "../hooks/useGetUserDetails";
 
-const ProtectedRoute = ({ children }) => {
-  const userDetails = useGetUserData();
-
-  if (!userDetails) {
-    return <div>Loading...</div>;
+const ProtectedRoute = ({ user, children }) => {
+  console.log(user);
+  if (!user) {
+    return <Navigate to="/login" />;
   }
-
-  return userDetails ? children : <Navigate to="/login" />;
+  return children;
 };
 
 export default ProtectedRoute;

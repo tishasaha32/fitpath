@@ -12,23 +12,35 @@ import Journal from "./pages/Journal";
 import AddBlogs from "./pages/AddBlogs";
 import FullBlogBody from "./pages/FullBlogBody";
 import Profile from "./pages/Profile";
-import { useGetUserData } from "./hooks/useGetUserDetails";
 import ProtectedRoute from "./common/ProtectedRoute";
+import { useEffect, useState } from "react";
+import { auth } from "./firebase/config";
 
 function App() {
-  const userDetails = useGetUserData();
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true); // Add loading state
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setUser(user);
+      setLoading(false); // Set loading to false after checking auth state
+    });
+    return () => unsubscribe();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>; // Show a loading spinner or placeholder content
+  }
+
   return (
     <div className="App">
       <Routes>
-        <Route path="/login" element={userDetails ? <Home /> : <Login />} />
-        <Route
-          path="/register"
-          element={userDetails ? <Home /> : <Register />}
-        />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route
           path="/"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <Home />
             </ProtectedRoute>
           }
@@ -36,7 +48,7 @@ function App() {
         <Route
           path="/reels"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <Reels />
             </ProtectedRoute>
           }
@@ -44,7 +56,7 @@ function App() {
         <Route
           path="/journal"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <Journal />
             </ProtectedRoute>
           }
@@ -52,7 +64,7 @@ function App() {
         <Route
           path="/recipes"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <Recipes />
             </ProtectedRoute>
           }
@@ -60,7 +72,7 @@ function App() {
         <Route
           path="/addRecipe"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <AddRecipe />
             </ProtectedRoute>
           }
@@ -68,7 +80,7 @@ function App() {
         <Route
           path="/categories/:id"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <CategoryWiseRecipes />
             </ProtectedRoute>
           }
@@ -76,7 +88,7 @@ function App() {
         <Route
           path="/recipe/:id"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <FullRecipeBody />
             </ProtectedRoute>
           }
@@ -84,7 +96,7 @@ function App() {
         <Route
           path="/addBlog"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <AddBlogs />
             </ProtectedRoute>
           }
@@ -92,7 +104,7 @@ function App() {
         <Route
           path="/blogs/:id"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <FullBlogBody />
             </ProtectedRoute>
           }
@@ -100,7 +112,7 @@ function App() {
         <Route
           path="/profile"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <Profile />
             </ProtectedRoute>
           }

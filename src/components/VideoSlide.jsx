@@ -1,13 +1,11 @@
 import React, { useState, useRef } from "react";
 import { AiFillLike } from "react-icons/ai";
 import { FaComment } from "react-icons/fa";
-import { BsShareFill } from "react-icons/bs";
 import useUpdateLikes from "../hooks/useUpdateLikes";
 import styles from "./ReelsComponent.module.css";
 import CommentModal from "./CommentModal";
-import useShare from "../hooks/useShare";
 
-const VideoSlide = ({ video, videoId, videoRef, videoURL }) => {
+const VideoSlide = ({ video, videoId, videoRef }) => {
   const [liked, updateLikes] = useUpdateLikes(videoId);
   const [showModal, setShowModal] = useState(false);
 
