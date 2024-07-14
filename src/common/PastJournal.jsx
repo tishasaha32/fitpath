@@ -60,7 +60,10 @@ function PastJournal({ setShowPastModal }) {
                 alt="cover_image"
               />
               <CardContent>
-                <div dangerouslySetInnerHTML={{ __html: history }} />
+                <Typography gutterBottom variant="h5" component="div">
+                  {history.title}
+                </Typography>
+                <div dangerouslySetInnerHTML={{ __html: history.journal }} />
               </CardContent>
             </CardActionArea>
           </Card>

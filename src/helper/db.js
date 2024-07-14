@@ -33,8 +33,8 @@ export const getJournalHistory = async (
     } else {
       setNoData(false);
       const historyData = querySnapshot.docs.map((doc) => doc.data());
-      console.log(historyData[0].journal);
-      setHistory(historyData[0].journal);
+      console.log(historyData[0]);
+      setHistory(historyData[0]);
     }
   } catch (error) {
     console.log(error, "GET JOURNAL HISTORY");
