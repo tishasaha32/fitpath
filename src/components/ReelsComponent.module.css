@@ -16,6 +16,9 @@
     right: 1rem;
     color: white;
 }
+.likesCount{
+    font-size: 10rem;
+}
 .comment{
     position: absolute;
     top: 80%;

@@ -3,11 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import styles from "./ReelsComponent.module.css";
-import { AiFillLike } from "react-icons/ai";
-import { FaComment } from "react-icons/fa";
-import { BsShareFill } from "react-icons/bs";
 import useFetchVideos from "../hooks/useFetchVideos";
-import useUpdateLikes from "../hooks/useUpdateLikes";
+import VideoSlide from "./VideoSlide";
 
 const ReelsComponent = () => {
   const { videos, loading, error } = useFetchVideos();
@@ -24,11 +21,8 @@ const ReelsComponent = () => {
       const playPromise = currentVideo.play();
       if (playPromise !== undefined) {
         playPromise
-          .then(() => {
-            // Automatic playback started!
-          })
+          .then(() => {})
           .catch((error) => {
-            // Auto-play was prevented
             console.log("Play prevented: user interaction needed");
           });
       }
@@ -55,39 +49,6 @@ const ReelsComponent = () => {
         </SwiperSlide>
       ))}
     </Swiper>
-  );
-};
-
-const VideoSlide = ({ video, videoId, videoRef }) => {
-  const [likes, liked, updateLikes] = useUpdateLikes(videoId);
-
-  return (
-    <>
-      <video
-        ref={videoRef}
-        loop
-        className={styles.video}
-        controls
-        muted
-        onClick={(e) => {
-          e.target.play().catch((error) => {
-            console.log("Play prevented: user interaction needed");
-          });
-        }}
-      >
-        <source src={video} type="video/mp4" />
-      </video>
-      <div className={styles.iconContainer}>
-        <AiFillLike
-          className={styles.like}
-          style={{ color: liked ? "blue" : "white" }}
-          onClick={updateLikes}
-        />
-        <span>{likes} Likes</span>
-        <FaComment className={styles.comment} />
-        <BsShareFill className={styles.share} />
-      </div>
-    </>
   );
 };
 
