@@ -45,6 +45,7 @@ const ReelsComponent = () => {
             video={video.videoURL}
             videoId={video.id}
             videoRef={(el) => (videoRefs.current[index] = el)}
+            videoURL={video.videoURL}
           />
         </SwiperSlide>
       ))}

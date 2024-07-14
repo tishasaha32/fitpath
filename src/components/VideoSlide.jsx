@@ -5,16 +5,25 @@ import { BsShareFill } from "react-icons/bs";
 import useUpdateLikes from "../hooks/useUpdateLikes";
 import styles from "./ReelsComponent.module.css";
 import CommentModal from "./CommentModal";
+import useShare from "../hooks/useShare";
 
-const VideoSlide = ({ video, videoId, videoRef }) => {
+const VideoSlide = ({ video, videoId, videoRef, videoURL }) => {
   const [likes, liked, updateLikes] = useUpdateLikes(videoId);
+  const shareContent = useShare();
+
+  const handleShare = () => {
+    shareContent(
+      "Check out this video!",
+      "I found this amazing video, have a look!",
+      videoURL
+    );
+  };
   const [showModal, setShowModal] = useState(false);
 
   const handleCloseModal = () => setShowModal(false);
   const handleOpenModal = () => setShowModal(true);
 
   const handleAddComment = (commentText) => {
-    // Implement your logic to add comment here
     console.log("Adding comment:", commentText);
     handleCloseModal();
   };
@@ -42,7 +51,7 @@ const VideoSlide = ({ video, videoId, videoRef }) => {
           onClick={updateLikes}
         />
         <FaComment className={styles.comment} onClick={handleOpenModal} />
-        <BsShareFill className={styles.share} />
+        <BsShareFill className={styles.share} onClick={handleShare} />
       </div>
       <CommentModal
         isOpen={showModal}
