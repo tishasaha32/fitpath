@@ -90,7 +90,7 @@ function Register() {
       <button className={styles.registerButton}>REGISTER</button>
       <div
         className={
-          message === "Login Successful"
+          message === "Registration successful"
             ? styles.messageSuccessContainer
             : styles.messageErrorContainer
         }

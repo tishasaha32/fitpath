@@ -36,6 +36,7 @@ const useHandleRegister = () => {
             email: email,
             phoneNumber: phoneNumber,
             admin: false,
+            uid: res?.user.uid,
           });
         }
 
