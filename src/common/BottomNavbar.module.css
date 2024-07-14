@@ -1,0 +1,21 @@
+.bottomNavbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 10;
+    border-top: 1px solid black;
+}
+
+.homeIcon, .kitchenIcon, .journalIcon, .videoIcon{
+    font-size: 1.5rem;
+}
+.activeIcon{
+    font-size: 1.8rem;
+    color: black;
+}
