@@ -1,0 +1,11 @@
+.activeTab{
+    color: #9225E9;
+    text-decoration: underline;
+}
+.recipeDetailsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+    font-weight: bolder;
+}

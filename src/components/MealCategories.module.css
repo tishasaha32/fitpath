@@ -1,0 +1,38 @@
+.recipeMealCategoriesContainer{
+    margin-bottom: 5rem;
+}
+.mealCategoriesContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 1rem;
+}
+.recipePageImage{
+    width: 100vw;
+}
+.mealContainer{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    width: 90vw;
+    margin: 0 1rem ;
+    border: 1px solid #A2A2A2;
+}
+.mealImage{
+    width: 20vw;
+    height: 8vh;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.mealName{
+    font-weight: bolder;
+    color: #9225E9;
+}
+.message{
+    font-size: 0.8rem;
+    color: #a7a7a7;
+}

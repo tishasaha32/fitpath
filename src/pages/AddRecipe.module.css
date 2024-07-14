@@ -1,0 +1,9 @@
+.reactQuill{
+    background-color: white;
+}
+
+:global(.ql-container) {
+    height: 30vh;
+    background-color: white;
+    border:none;
+}

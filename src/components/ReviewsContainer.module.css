@@ -1,0 +1,59 @@
+.noReviews{
+    margin: 1rem;
+    font-weight: bolder;
+}
+.reviewsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin-bottom: 8rem;
+}
+.reviewContainer{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    gap: 1rem;
+    margin: 10px;
+    padding: 1rem;
+    border-bottom: 1px solid black;
+}
+.reviewInputContainer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: white;
+}
+.userIcon{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+.userName{
+    font-weight: bolder;
+}
+.reviewInput{
+    width: 90vw;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 1rem;
+}
+.submitButton{
+    background: linear-gradient(to right, #9225E9, #F17B00);
+    color: #fff;
+    border: none;
+    padding: 14px;
+    width: 40vw;
+    border-radius: 2rem;
+    font-weight: bolder;
+      outline: none;
+    letter-spacing: 2px;
+}

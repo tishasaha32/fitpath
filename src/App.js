@@ -4,6 +4,10 @@ import Reels from "./pages/Reels";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
+import Recipes from "./pages/Recipes";
+import AddRecipe from "./pages/AddRecipe";
+import CategoryWiseRecipes from "./pages/CategoryWiseRecipes";
+import FullRecipeBody from "./pages/FullBodyRecipe";
 
 function App() {
   return (
@@ -13,6 +17,10 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Home />} />
         <Route path="/reels" element={<Reels />} />
+        <Route path="/recipes" element={<Recipes />} />
+        <Route path="/addRecipe" element={<AddRecipe />} />
+        <Route path="/categories/:id" element={<CategoryWiseRecipes />} />
+        <Route path="/recipe/:id" element={<FullRecipeBody />} />
       </Routes>
     </div>
   );
