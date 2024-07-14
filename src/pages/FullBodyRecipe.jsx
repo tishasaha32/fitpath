@@ -5,6 +5,8 @@ import ReviewsContainer from "../components/ReviewsContainer";
 import RecipeDetailsContainer from "../components/RecipeDetailsContainer";
 import { useParams } from "react-router-dom";
 import styles from "./FullBodyRecipe.module.css";
+import Header from "../common/Header";
+import BottomNavbar from "../common/BottomNavbar";
 
 function FullRecipeBody() {
   const { id } = useParams();
@@ -13,6 +15,7 @@ function FullRecipeBody() {
 
   return (
     <div>
+      <Header />
       <RecipeImageTitleDescription recipe={recipe} />
       <RecipeDetailsContainer
         setRecipeDetailTab={setRecipeDetailTab}
@@ -33,6 +36,7 @@ function FullRecipeBody() {
         )}
         {recipeDetailTab === "reviews" && <ReviewsContainer docId={id} />}
       </div>
+      <BottomNavbar />
     </div>
   );
 }

@@ -1,0 +1,22 @@
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    height: 60px;
+    z-index: 10;
+    border-bottom: 1px solid black;
+    padding: 1rem;
+}
+.name{
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+.logoContainer{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.userIcon{
+    font-size: 1.2rem;
+}

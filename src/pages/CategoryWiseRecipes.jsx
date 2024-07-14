@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./CategoryWiseRecipes.module.css";
 import { Link } from "react-router-dom";
 import useGetCategoryWiseRecipes from "../hooks/useGetCategoryWiseRecipes";
+import Header from "../common/Header";
+import BottomNavbar from "../common/BottomNavbar";
 
 function CategoryWiseRecipes() {
   const pathname = window.location.pathname;
@@ -14,6 +16,7 @@ function CategoryWiseRecipes() {
     });
   return (
     <div>
+      <Header />
       <div className={styles.mealCategoriesContainer}>
         <p
           onClick={() => handleMealCategory("veg")}
@@ -50,6 +53,7 @@ function CategoryWiseRecipes() {
           </Link>
         ))}
       </div>
+      <BottomNavbar />
     </div>
   );
 }

@@ -1,0 +1,26 @@
+.journal{
+    width: 100vw;
+    height: 86vh;
+    object-fit: cover;
+    position: relative;
+}
+.buttonContainer{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.button{
+    width: 70vw;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    font-size: 1rem;
+    cursor: pointer;
+}

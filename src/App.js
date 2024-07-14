@@ -8,6 +8,7 @@ import Recipes from "./pages/Recipes";
 import AddRecipe from "./pages/AddRecipe";
 import CategoryWiseRecipes from "./pages/CategoryWiseRecipes";
 import FullRecipeBody from "./pages/FullBodyRecipe";
+import Journal from "./pages/Journal";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Home />} />
         <Route path="/reels" element={<Reels />} />
+        <Route path="/journal" element={<Journal />} />
         <Route path="/recipes" element={<Recipes />} />
         <Route path="/addRecipe" element={<AddRecipe />} />
         <Route path="/categories/:id" element={<CategoryWiseRecipes />} />
