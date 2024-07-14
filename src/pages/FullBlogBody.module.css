@@ -1,0 +1,10 @@
+.blogImage{
+    width: 100vw;
+    object-fit: cover;
+}
+.blogTitle{
+    padding: 10px 15px;
+}
+.blogBody{
+    padding: 10px 15px;
+}

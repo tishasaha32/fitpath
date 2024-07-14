@@ -9,6 +9,8 @@ import AddRecipe from "./pages/AddRecipe";
 import CategoryWiseRecipes from "./pages/CategoryWiseRecipes";
 import FullRecipeBody from "./pages/FullBodyRecipe";
 import Journal from "./pages/Journal";
+import AddBlogs from "./pages/AddBlogs";
+import FullBlogBody from "./pages/FullBlogBody";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/addRecipe" element={<AddRecipe />} />
         <Route path="/categories/:id" element={<CategoryWiseRecipes />} />
         <Route path="/recipe/:id" element={<FullRecipeBody />} />
+        <Route path="/addBlog" element={<AddBlogs />} />
+        <Route path="/blogs/:id" element={<FullBlogBody />} />
       </Routes>
     </div>
   );

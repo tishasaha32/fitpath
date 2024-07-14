@@ -20,7 +20,6 @@ function AddRecipe() {
     e.preventDefault();
     try {
       let imageURL = "";
-      // Upload image to storage
       if (image) {
         const imageRef = ref(storage, `recipes/${image.name}`);
         await uploadBytes(imageRef, image);
@@ -36,8 +35,6 @@ function AddRecipe() {
         mealTime,
       });
       console.log("Document written with ID: ", docRef.id);
-
-      // Clear form fields
       setRecipeName("");
       setDiseaseCategory("");
       setIngredients("");
