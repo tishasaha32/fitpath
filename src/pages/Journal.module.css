@@ -1,26 +1,60 @@
-.journal{
+.journal {
+  height: 100vh;
+  width: 100vw;
+  /* background-color: #fef6ad; */
+  background: #fef6ad;
+  position: relative;
+  overflow: hidden;
+}
+.journalImg {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+.journalImgDesktop {
+  display: none;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-around;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 50%;
+}
+.button {
+  background-color: black !important;
+  color: white !important;
+  font-size: 1rem !important;
+  width: 80vw;
+  padding: 0.5rem;
+}
+.form * {
+  margin: 8px;
+  padding: 8px;
+}
+
+/* RESPONSIVENESS FOR LARGE SCREEN */
+
+@media (min-width: 768px) {
+  .journalImg {
+    display: none;
+  }
+  .journalImgDesktop {
+    display: block;
     width: 100vw;
-    height: 86vh;
+    height: 100vh;
     object-fit: cover;
-    position: relative;
-}
-.buttonContainer{
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.button{
-    width: 70vw;
-    height: 40px;
-    border-radius: 5px;
-    border: none;
-    background-color: black;
-    color: white;
-    font-weight: bolder;
-    font-size: 1rem;
-    cursor: pointer;
+  }
+  .buttonContainer {
+    top: 80%;
+  }
+  .button {
+    width: 40vw;
+    margin: auto;
+  }
 }

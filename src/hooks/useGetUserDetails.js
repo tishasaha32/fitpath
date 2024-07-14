@@ -6,12 +6,14 @@ export const useGetUserData = () => {
   const [userDetails, setUserDetails] = useState(null);
 
   const fetchUserData = useCallback(async () => {
+    console.log("******");
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       if (user) {
         setUserDetails(user);
         const docRef = doc(db, "users", user.uid);
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
+          console.log(docSnap.data());
           setUserDetails(docSnap.data());
         }
       } else {

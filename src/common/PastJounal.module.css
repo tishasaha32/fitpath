@@ -1,0 +1,15 @@
+.form {
+  margin: 0px;
+}
+
+.journal {
+  width: 90vw;
+}
+
+/* RESPONSIVENESS FOR LARGE SCREEN */
+
+@media (min-width: 768px) {
+  .journal {
+    width: 50vw;
+  }
+}
