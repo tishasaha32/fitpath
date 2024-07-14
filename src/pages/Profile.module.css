@@ -1,0 +1,47 @@
+
+.userDetailsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.userImageContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    margin-top: 4.5rem;
+}
+.userImage{
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border: 1px solid #a7a7a7;
+    border-radius: 50%;
+}
+.userDetailsHeader{
+    margin: 0 1rem;
+    font-weight: bold;
+}
+.userDetails{
+    padding: 0.7rem;
+    margin: 1rem;
+    border: 1px solid #a7a7a7;
+    background-color: white;
+    border-radius: 1.5rem;
+    color: #848484;
+}
+.logoutContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logoutButton{
+    width: 90vw;
+    padding: 0.8rem;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}

@@ -11,6 +11,7 @@ import FullRecipeBody from "./pages/FullBodyRecipe";
 import Journal from "./pages/Journal";
 import AddBlogs from "./pages/AddBlogs";
 import FullBlogBody from "./pages/FullBlogBody";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/recipe/:id" element={<FullRecipeBody />} />
         <Route path="/addBlog" element={<AddBlogs />} />
         <Route path="/blogs/:id" element={<FullBlogBody />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </div>
   );
