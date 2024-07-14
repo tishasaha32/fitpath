@@ -6,6 +6,19 @@
   width: 90vw;
 }
 
+.closeButton {
+  height: 5.5vh;
+  width: 50vw;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background-color: #ef5350;
+  margin-top: 20px;
+  margin-left: calc(50vw - 25vw);
+}
+
 /* RESPONSIVENESS FOR LARGE SCREEN */
 
 @media (min-width: 768px) {

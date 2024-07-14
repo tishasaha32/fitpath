@@ -12,23 +12,99 @@ import Journal from "./pages/Journal";
 import AddBlogs from "./pages/AddBlogs";
 import FullBlogBody from "./pages/FullBlogBody";
 import Profile from "./pages/Profile";
+import { useGetUserData } from "./hooks/useGetUserDetails";
+import ProtectedRoute from "./common/ProtectedRoute";
 
 function App() {
+  const userDetails = useGetUserData();
   return (
     <div className="App">
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/reels" element={<Reels />} />
-        <Route path="/journal" element={<Journal />} />
-        <Route path="/recipes" element={<Recipes />} />
-        <Route path="/addRecipe" element={<AddRecipe />} />
-        <Route path="/categories/:id" element={<CategoryWiseRecipes />} />
-        <Route path="/recipe/:id" element={<FullRecipeBody />} />
-        <Route path="/addBlog" element={<AddBlogs />} />
-        <Route path="/blogs/:id" element={<FullBlogBody />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/login" element={userDetails ? <Home /> : <Login />} />
+        <Route
+          path="/register"
+          element={userDetails ? <Home /> : <Register />}
+        />
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/reels"
+          element={
+            <ProtectedRoute>
+              <Reels />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/journal"
+          element={
+            <ProtectedRoute>
+              <Journal />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/recipes"
+          element={
+            <ProtectedRoute>
+              <Recipes />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/addRecipe"
+          element={
+            <ProtectedRoute>
+              <AddRecipe />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/categories/:id"
+          element={
+            <ProtectedRoute>
+              <CategoryWiseRecipes />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/recipe/:id"
+          element={
+            <ProtectedRoute>
+              <FullRecipeBody />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/addBlog"
+          element={
+            <ProtectedRoute>
+              <AddBlogs />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/blogs/:id"
+          element={
+            <ProtectedRoute>
+              <FullBlogBody />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </div>
   );

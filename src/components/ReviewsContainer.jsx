@@ -43,7 +43,7 @@ function ReviewsContainer({ docId }) {
       <div className={styles.reviewInputContainer}>
         <input
           type="text"
-          placeholder="Share the details of your experience here"
+          placeholder="Did you like it?"
           className={styles.reviewInput}
           value={reviewText}
           onChange={(e) => setReviewText(e.target.value)}

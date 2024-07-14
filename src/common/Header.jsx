@@ -2,13 +2,16 @@ import React from "react";
 import styles from "./Header.module.css";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { FaRegUserCircle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 function Header() {
+  const { pathname } = useLocation();
   return (
     <div className={styles.headerContainer}>
       <div className={styles.logoContainer}>
-        <IoMdArrowRoundBack onClick={() => window.history.go(-1)} />
+        {pathname !== "/" && (
+          <IoMdArrowRoundBack onClick={() => window.history.go(-1)} />
+        )}
         <p className={styles.name}> FitPath</p>
       </div>
       <Link to="/profile" style={{ textDecoration: "none", color: "black" }}>

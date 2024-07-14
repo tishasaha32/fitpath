@@ -86,6 +86,14 @@ function PastJournal({ setShowPastModal }) {
           </h3>
         </div>
       )}
+      <button
+        className={styles.closeButton}
+        onClick={() => {
+          setShowPastModal(false);
+        }}
+      >
+        Close
+      </button>
     </div>
   );
 }

@@ -21,13 +21,13 @@
 }
 .reviewInputContainer{
     position: fixed;
-    bottom: 0;
+    bottom: 8vh;
     width: 100vw;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    padding: 10px;
     justify-content: center;
-    padding: 1rem;
+    gap: 1rem;
     background-color: white;
 }
 .userIcon{
@@ -44,7 +44,6 @@
     border: 1px solid black;
     border-radius: 5px;
     outline: none;
-    margin-bottom: 1rem;
 }
 .submitButton{
     background: linear-gradient(to right, #9225E9, #F17B00);

@@ -34,6 +34,7 @@ function Journal() {
 
   return (
     <div className={styles.journal}>
+      <Header />
       <div className={styles.journalContainer}>
         {/* 
         //* ACTON BUTTONS 
@@ -126,6 +127,7 @@ function Journal() {
           </div>
         </ModalComponent>
       )}
+      <BottomNavbar />
     </div>
   );
 }
