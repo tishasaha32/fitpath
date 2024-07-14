@@ -34,90 +34,93 @@ function App() {
 
   return (
     <div className="App">
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route
-          path="/"
-          element={
-            <ProtectedRoute user={user}>
-              <Home />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/reels"
-          element={
-            <ProtectedRoute user={user}>
-              <Reels />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/journal"
-          element={
-            <ProtectedRoute user={user}>
-              <Journal />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/recipes"
-          element={
-            <ProtectedRoute user={user}>
-              <Recipes />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/addRecipe"
-          element={
-            <ProtectedRoute user={user}>
-              <AddRecipe />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/categories/:id"
-          element={
-            <ProtectedRoute user={user}>
-              <CategoryWiseRecipes />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/recipe/:id"
-          element={
-            <ProtectedRoute user={user}>
-              <FullRecipeBody />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/addBlog"
-          element={
-            <ProtectedRoute user={user}>
-              <AddBlogs />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/blogs/:id"
-          element={
-            <ProtectedRoute user={user}>
-              <FullBlogBody />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/profile"
-          element={
-            <ProtectedRoute user={user}>
-              <Profile />
-            </ProtectedRoute>
-          }
-        />
-      </Routes>
+      <div className="desktop-message">Please check the app on mobile</div>
+      <div className="app-content">
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute user={user}>
+                <Home />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/reels"
+            element={
+              <ProtectedRoute user={user}>
+                <Reels />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/journal"
+            element={
+              <ProtectedRoute user={user}>
+                <Journal />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/recipes"
+            element={
+              <ProtectedRoute user={user}>
+                <Recipes />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/addRecipe"
+            element={
+              <ProtectedRoute user={user}>
+                <AddRecipe />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/categories/:id"
+            element={
+              <ProtectedRoute user={user}>
+                <CategoryWiseRecipes />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/recipe/:id"
+            element={
+              <ProtectedRoute user={user}>
+                <FullRecipeBody />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/addBlog"
+            element={
+              <ProtectedRoute user={user}>
+                <AddBlogs />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/blogs/:id"
+            element={
+              <ProtectedRoute user={user}>
+                <FullBlogBody />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute user={user}>
+                <Profile />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </div>
     </div>
   );
 }

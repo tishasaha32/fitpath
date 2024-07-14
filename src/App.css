@@ -5,3 +5,29 @@
   box-sizing: border-box;
   font-family: 'Poppins';
 }
+
+/* global.css */
+
+/* Hide content on small screens and show message */
+@media (min-width: 768px) {
+  .app-content {
+    display: none;
+  }
+  .desktop-message {
+    display: block;
+    text-align: center;
+    padding: 50px;
+    font-size: 24px;
+    color: #333;
+  }
+}
+
+/* Show content on small screens and hide message */
+@media (max-width: 767px) {
+  .app-content {
+    display: block;
+  }
+  .desktop-message {
+    display: none;
+  }
+}
