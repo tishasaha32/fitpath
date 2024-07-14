@@ -1,0 +1,21 @@
+.noData {
+  display: flex;
+  align-items: center;
+  margin-top: 5rem;
+  flex-direction: column;
+}
+.nodataimg {
+  width: 80%;
+}
+.nodatatext {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* RESPONSIVENESS FOR LARGE SCREEN */
+
+@media (min-width: 768px) {
+  .nodataimg {
+    width: 40%;
+  }
+}

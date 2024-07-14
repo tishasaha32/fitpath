@@ -1,0 +1,36 @@
+.form * {
+  margin: 2px 0;
+}
+
+.form {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.modalButtonsContainer {
+  /* margin-top: 10rem; */
+  position: absolute;
+  bottom: -3px;
+  margin: 0px;
+}
+
+.addButton,
+.closeButton {
+  height: 5.5vh;
+  width: 50vw;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.addButton {
+  background-color: #81c784;
+}
+
+.closeButton {
+  background-color: #ef5350;
+}
